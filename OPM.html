@@ -1,0 +1,425 @@
+﻿<!Doctype html>
+<html>
+<head>
+<title>Eotteohkae!!! What M/V is this? | OPM M/V Quiz</title>
+<style type="text/css">
+
+body {
+   background-image: url("imageedit_2_3100653864.gif");
+   background-size: contain;
+   background-repeat: repeat;
+   z-index: auto;
+}
+
+div.header
+                   {
+                    width: 97.4%;
+                    height: 50px;
+                    padding: 10px;
+                    color: white;
+                    background-color: #F7CAC9;
+                    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.50), 0 10px 30px 0 rgba(0, 0, 0, 0.60);
+                    position: fixed;
+                    top: 0; z-index:2;
+                   }
+
+ div.footer
+                   {
+                    padding: 1em;
+                    color: white;
+                    background-color:  #92A8D1;
+                    clear: left;
+                    text-align: center;
+                    font-family: Lucida Sans Unicode;
+                    text-shadow: 2px 2px 4px #000000;
+                    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.50), 0 10px 30px 0 rgba(0, 0, 0, 0.60);
+                   }
+
+h1.header 
+              {
+                font-family: Comic Sans MS;
+               padding: 0em; margin: 0px;
+               text-shadow: 2px 2px 4px #000000;
+              }
+.dul
+{
+  border: 3px solid gray;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #808080;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 98.9%;
+    height: 53.4px;
+    position: fixed;
+    top: 70px;
+    z-index: 100;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    font-family: Arial Black;
+    text-align: center;
+    padding: 15px 34px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #404040;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.active {
+    background-color: #DC143C;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+li a:hover:not(.active1) {
+    background-color: #F08080;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.active1 {
+    background-color: #595959;
+    
+}
+
+#main {
+width: 50%;
+max-width: 950px;
+border: 5px gray solid;
+margin: auto;
+padding: 10px;
+background-color: #fffff;
+border-radius: 10px;
+text-align:center;
+padding:8em;
+padding-top:2em;
+margin-bottom:5px;
+margin-top:10em;
+}
+#Ans{border:1px solid;
+border-radius: 10px;
+margin:5px;
+padding:5px;}
+
+#content{border:2px solid;
+border-radius: 10px;
+padding:2em;
+margin:2em;}
+</style>
+
+<script type="text/JavaScript">
+
+// Insert number of questions
+var numQues = 15;
+
+// Insert number of choices in each question
+var numChoi = 4;
+
+// Insert number of questions displayed in answer area
+var answers = new Array(4);
+
+// Insert answers to questions
+answers[0] = "Sam Concepcion & Tippy Dos Santos - Dati";
+answers[1] = "Vice Ganda - Wag Kang Pabebe";
+answers[2] = "Daniel Padilla - Simpleg Tulad Mo";
+answers[3] =  "Sponge Cola - Di Na Mababawi";
+answers[4] = "Gary Valenciano - How Did You Know";
+answers[5] = "Eraserheads - Ang Hulng El Bimbo";
+answers[6] ="Kyla - Hanggang Ngayon";
+answers[7] ="Michael Pangilinan - Pare Mahal Mo Raw Ako";
+answers[8] ="Jireh Lim - Magkabilang Mundo";
+answers[9] ="KZ Tandingan - Mahal Ko O Mahal Ako";
+answers[10] ="Sarah Geronimo - Kilometro"
+answers[11] ="Rocksteddy - Superhero";
+answers[12] ="James Reid & Nadine Lustre - Hanap - Hanap";
+answers[13] ="Angeline Quinto - Bakit Pa Minahal Kita"; 
+answers[14]  = "Yeng Constantino - Ikaw";
+//getting score
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var Selected;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      Selected = form.elements[currElt + j];
+      if (Selected.checked) {
+        if (Selected.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+
+//End Javascript
+</script>
+</head>
+<body>
+       <div class="container">
+            <div class="header">
+            <h1 class="header">Eotteokhae!!! What M/V is this?</h1>
+       </div>
+        <ul>
+            <li><a  href="EOTTEOKHAE.html">Home</a></li>
+            <li><a href="K-POP.html">K-POP</a></li>
+            <li><a href="WESTERN.html">International Music</a></li>
+            <li><a class="active" href="OPM.html">OPM</a></li>
+            <li class="hana" style="float:right"><a class="active1" href="REFERENCES.html">References</a></li>
+            <li class="hana" style="float:right"><a class="active1" href="ABOUT.html">About</a></li>
+            
+       </ul>
+
+      <div id="main">
+<h1>OPM</h1>
+<form  id="kpop" >
+<div id="content">
+<img class="dul" src="sam.gif"width=350px height=196px>
+<hr>
+<div id="Ans">
+<input type="radio" name="sam" value="a" >Sam Concepcion - Mahal Na Mahal
+</div><div id="Ans">
+<input type="radio" name="sam" value="Sam Concepcion & Tippy Dos Santos - Dati" >Sam Concepcion & Tippy Dos Santos - Dati
+</div><div id="Ans">
+<input type="radio" name="sam" value="Sam Conception" >Sam Conception - Mahal Na Mahal
+</div><div id="Ans">
+<input type="radio" name="sam" value="sdf" >Sam Conception & Tippy Dos Santos - Dati
+</div>
+</div>
+<div id="content">
+<img class="dul" src="vice.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="vice" value="vice">Vice Ganda - KaraKaraka
+</div><div id="Ans">
+<input type="radio" name="vice" value="lala" >Vice Ganda - Ang Kulit
+</div><div id="Ans">
+<input type="radio" name="vice" value="Vice Ganda - Wag Kang Pabebe" />Vice Ganda - Wag Kang Pabebe</div><div id="Ans">
+<input type="radio" name="vice" value="lk" >Vice Ganda - Hanggang Kailan Aasa
+</div>
+</div>
+<div id="content">
+<img class="dul" src="daniel.gif"width=350px height=196px>
+<hr>
+<div id="Ans">
+<input type="radio" name="daniel" value="Daniel Padilla - Simpleg Tulad Mo" >Daniel Padilla - Simpleg Tulad Mo
+</div><div id="Ans">
+<input type="radio" name="daniel" value="jk" >Daniel Padilla - Grow Old With You
+</div><div id="Ans">
+<input type="radio" name="daniel" value="daniel" >Daniel Padilla - Nasayo na ang Lahat
+</div><div id="Ans">
+<input type="radio" name="daniel" value="p" >Daniel Padilla - Ako'y Sa'yo, Ika'y Akin Lamang
+</div>
+</div>
+<div id="content">
+
+<img class="dul" src="sponge.gif" width=350px height=196px >
+<hr>
+<div id="Ans">
+<input type="radio" name="sponge" value="Sponge Cola - " > Sponge Cola - Makapiling Ka
+</div><div id="Ans">
+<input type="radio" name="sponge" value="sponge - Wow" >Callalily - Magbalik
+</div><div id="Ans">
+<input type="radio" name="sponge" value="Block B - Toy " >Callalily - Pansamantala
+</div><div id="Ans">
+<input type="radio" name="sponge" value="Sponge Cola - Di Na Mababawi" >Sponge Cola - Di Na Mababawi
+</div>
+</div>
+<div id="content">
+<img class="dul" src="gary.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="gary" value="yo" >Martin Rivera - Kahit Isang Saglit
+</div><div id="Ans">
+<input type="radio" name="gary" value="Gary Valenciano - How Did You Know" >Gary Valenciano - How Did You Know
+</div><div id="Ans">
+<input type="radio" name="gary" value="Gary Valenciano " >Gary Valenciano - Warrior Is A Child
+</div><div id="Ans">
+<input type="radio" name="gary" value="o" >Martin Rivera - Be My Lady
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="eheads.gif" width=350px height=196px>
+<hr>
+<div id="Ans">
+<input type="radio" name="eheads" value="Eraserheads - Ang Hulng El Bimbo" >Eraserheads - Ang Hulng El Bimbo
+</div><div id="Ans">
+<input type="radio" name="eheads" value="lo" >Parokya Ni Edgar - Para Sayo
+</div><div id="Ans">
+<input type="radio" name="eheads" value="li" >Parokya Ni Edgar - Wag Mo Na Sana
+</div><div id="Ans">
+<input type="radio" name="eheads" value="Eraserheads" >Eraserheads - Ligaya
+</div>
+</div>
+
+
+<div id="content">
+<img class="dul" src="kyla.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="kyla" value="Kyla" >Kyla - I Don't Want You Go
+</div>
+<div id="Ans">
+<input type="radio" name="kyla" value="Kyla - Hanggang Ngayon">Kyla - Hanggang Ngayon
+</div><div id="Ans">
+<input type="radio" name="kyla" value="re" >Regine Velasquez - Dadalhiin
+</div><div id="Ans">
+<input type="radio" name="kyla" value="er" >Regine Velasquez - Pangarap Ko Ang Ibigin Ka
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="pare.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="pare" value="we" >Michael Pangilinan - Bakit Ba Ikaw
+</div>
+<div id="Ans">
+<input type="radio" name="pare" value="Michael Pangilinan - Pare Mahal Mo Raw Ako" >Michael Pangilinan - Pare Mahal Mo Raw Ako
+</div><div id="Ans">
+<input type="radio" name="pare" value="Michael Pangilinan" >Michael Pangilinan - Hanggang Kailan
+</div><div id="Ans">
+<input type="radio" name="pare" value="wew" >Michael Pangilinan - It Might Be You
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="jireh.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="jireh" value="rr" >Ezra Band - Walang Iba
+</div><div id="Ans">
+<input type="radio" name="jireh" value="ee" >Ezra Band - Runaway
+</div><div id="Ans">
+<input type="radio" name="jireh" value="Jireh Lim - Magkabilang Mundo" >Jireh Lim - Magkabilang Mundo
+</div><div id="Ans">
+<input type="radio" name="jireh" value="Jireh Lim" >Jireh Lim - Buko
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="kz.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="kz" value="KZ Tandingan - Mahal Ko O Mahal Ako" >KZ Tandingan - Mahal Ko O Mahal Ako
+</div><div id="Ans">
+<input type="radio" name="kz" value="re" >KZ Tandingan - Wag Ka nang Umiyak
+</div><div id="Ans">
+<input type="radio" name="kz" value="KZ Tandingan " >KZ Tandingan - Killing Me Softly
+</div><div id="Ans">
+<input type="radio" name="kz" value="vr" >KZ Tandingan - Scared to Death
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="sarah.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="sarah" value="fd" >Maja Salvador - Bakit Ganitp Ang Pag-Ibig
+</div>
+<div id="Ans">
+<input type="radio" name="sarah" value="Sarah Geronimo" >Sarah Geronimo - Ikot-Ikot
+</div><div id="Ans">
+<input type="radio" name="sarah" value="fdfd" >Maja Salvador - Dahan-Dahan
+</div><div id="Ans">
+<input type="radio" name="sarah" value="Sarah Geronimo - Kilometro" >Sarah Geronimo - Kilometro
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="teddy.gif" width=350px height=196px>
+<hr>
+<div id="Ans">
+<input type="radio" name="teddy" value="Rocksteddy - Superhero" >Rocksteddy - Superhero
+</div><div id="Ans">
+<input type="radio" name="teddy" value="fd" >Itchyworms - Akin Ka Na LAng
+</div><div id="Ans">
+<input type="radio" name="teddy" value="Rocksteddy "/>Rocksteddy - Deadma
+</div>
+<div id="Ans">
+<input type="radio" name="teddy" value="wr" >Itchyworms - Dalawang Letra
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="jadine.gif" width=350px height=196px>
+<hr>
+<div id="Ans">
+<input type="radio" name="jadine" value="James Reid & Nadine Lustre " >James Reid & Nadine Lustre - No Erase
+</div><div id="Ans">
+<input type="radio" name="jadine" value=""wen >Nadine Lustre - Bahala Na
+</div><div id="Ans">
+<input type="radio" name="jadine" value="ren" >James Reid & Nadine Lustre - This Time
+</div><div id="Ans">
+<input type="radio" name="jadine" value="James Reid & Nadine Lustre - Hanap - Hanap" >James Reid & Nadine Lustre - Hanap - Hanap
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="angeline.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="angeline" value="Angeline Quinto">Angeline Quinto - Kunin Mo Na Ang Lahat Sa akin
+</div><div id="Ans">
+<input type="radio" name="angeline" value="Angeline Quinto - Bakit Pa Minahal Kita" >Angeline Quinto - Bakit Pa Minahal Kita
+</div><div id="Ans">
+<input type="radio" name="angeline" value="ewe" >Rachelle Ann Go - Bakit
+</div><div id="Ans">
+<input type="radio" name="angeline" value="fr" >Rachelle Ann Go - Masasabi Mo Ba
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="yeng.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="yeng" value="Yeng Constantino - Ikaw" >Yeng Constantino - Ikaw
+</div><div id="Ans">
+<input type="radio" name="yeng" value="gtrr" >Yeng Constantino - Chinito
+</div><div id="Ans">
+<input type="radio" name="yeng" value="gt" >Yeng Constantino - Cool-Off
+</div><div id="Ans">
+<input type="radio" name="yeng" value="Yeng Constantino - Pag - Ibig" >Yeng Constantino - Pag-Ibig
+</div>
+</div>
+
+<br><br>
+<input type="button" value="Get score" onClick="getScore(this.form)">
+<input type="reset" value="Clear">
+<p> Score = <strong><input class="bgclr" type="text" size="5" name="percentage" disabled></strong><br><br>
+Correct answers:<br>
+<textarea class="bgclr" name="solutions" wrap="virtual" rows="4" cols="30" disabled>
+</textarea>
+</form>
+
+
+</div>
+       <div class="footer">
+            Copyright ©  2017 by: Paulo, Renz, and Jhone - Case Study in COMP121
+       </div>
+       </div>
+</body>
+</html>

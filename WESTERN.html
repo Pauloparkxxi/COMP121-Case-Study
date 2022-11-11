@@ -1,0 +1,484 @@
+﻿<!Doctype html>
+<html>
+<head>
+<title>Eotteohkae!!! What M/V is this? | WESTERN MUSIC M/V Quiz</title>
+<style type="text/css">
+
+body {
+   background-image: url("imageedit_2_3100653864.gif");
+   background-size: contain;
+   background-repeat: repeat;
+}
+
+div.header
+                   {
+                    width: 97.4%;
+                    height: 50px;
+                    padding: 10px;
+                    color: white;
+                    background-color: #F7CAC9;
+                    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.50), 0 10px 30px 0 rgba(0, 0, 0, 0.60);
+                    position: fixed;
+                    top: 0;
+                   }
+
+ div.footer
+                   {
+                    padding: 1em;
+                    color: white;
+                    background-color:  #92A8D1;
+                    clear: left;
+                    text-align: center;
+                    font-family: Lucida Sans Unicode;
+                    text-shadow: 2px 2px 4px #000000;
+                    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.50), 0 10px 30px 0 rgba(0, 0, 0, 0.60);
+                   }
+
+h1.header 
+              {
+                font-family: Comic Sans MS;
+               padding: 0em; margin: 0px;
+               text-shadow: 2px 2px 4px #000000;
+              }
+
+.dul
+{
+  border: 3px solid gray;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #808080;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 98.9%;
+    height: 53.4px;
+    position: fixed;
+    top: 70px;
+
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    font-family: Arial Black;
+    text-align: center;
+    padding: 15px 34px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #404040;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.active {
+    background-color: #DC143C;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+li a:hover:not(.active1) {
+    background-color: #F08080;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.active1 {
+    background-color: #595959;
+    
+}
+#main {
+width: 50%;
+max-width: 950px;
+border: 5px gray solid;
+margin: auto;
+padding: 10px;
+background-color: #fffff;
+border-radius: 10px;
+text-align:center;
+padding:8em;
+padding-top:2em;
+margin-bottom:5px;
+margin-top:10em;
+}
+#Ans{border:1px solid;
+border-radius: 10px;
+margin:5px;
+padding:5px;}
+
+#content{border:2px solid;
+border-radius: 10px;
+padding:2em;
+margin:2em;}
+span{fony-family:CommercialScript BT;}
+</style>
+<script type="text/JavaScript">
+
+
+// Insert number of questions
+var numQues = 15;
+
+// Insert number of choices in each question
+var numChoi = 4;
+
+// Insert number of questions displayed in answer area
+var answers = new Array(4);
+
+// Insert answers to questions
+answers[0] ="The Vamps - Oh Cecila"; 
+answers[1] = "Ariana Grande - Break Free";
+answers[2] = "Beyonce - Love On Top";
+answers[3] = "Paramore - Still Into You";
+answers[4] ="Spice Girls - Wannabe";
+answers[5] = "Backstreet Boys - Shape of My Heart";
+answers[6] ="Katy Perry - Roar";
+answers[7] ="Fifth Harmony - Worth It";
+answers[8] ="One Direction - Best Song Ever";
+answers[9] ="Taylor Swift - We Are Never Ever Getting Back Together";
+answers[10] ="Avril Lavigne - Sk8er Boi";
+answers[11] ="My Chemical Romance - Death Parade";
+answers[12] ="Troye Sivan - Youth";
+answers[13] ="5SOS - She Looks So Perfect";
+answers[14]  = "Little Mix - Salute";
+//getting score
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var Selected;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      Selected = form.elements[currElt + j];
+      if (Selected.checked) {
+        if (Selected.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+
+// End Javascript
+</script>
+</head>
+<body>
+       <div class="container">
+            <div class="header">
+            <h1 class="header">Eotteokhae!!! What M/V is this?</h1>
+       </div>
+        <ul>
+            <li><a  href="EOTTEOKHAE.html">Home</a></li>
+            <li><a href="K-POP.html">K-POP</a></li>
+            <li><a class="active" href="WESTERN.html">International Music</a></li>
+            <li><a href="OPM.html">OPM</a></li>
+            <li class="hana" style="float:right"><a class="active1" href="REFERENCES.html">References</a></li>
+            <li class="hana" style="float:right"><a class="active1" href="ABOUT.html">About</a></li>
+            
+       </ul>
+
+     <div id="main">
+<h1>Western</h1>
+<form  id="kpop" >
+<div id="content">
+<img class="dul" src="vamps.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="vamps" value="The Vamps - Wake Up">The Vamps - Wake Up
+</div>
+<div id="Ans">
+<input type="radio" name="vamps" value="Before you Exit - Heart like California" >Before you Exit - Heart like California
+</div>
+<div id="Ans">
+<input type="radio" name="vamps" value="Before you Exit - Clouds" >Before you Exit - Clouds<br/>
+</div>
+<div id="Ans">
+<input type="radio" name="vamps" value="The Vamps - Oh Cecila" >The Vamps - Oh Cecila
+</div>
+</div>
+<div id="content">
+<img class="dul" src="ariana.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="ariana" value="Ariana Grande - Break Free" >Ariana Grande - Break Free
+</div>
+<div id="Ans">
+<input type="radio" name="ariana" value="Ariana Grande - Problem" >Ariana Grande - Problem
+</div>
+<div id="Ans">
+<input type="radio" name="ariana" value="Selena Gomez - Hands to Myself" >Selena Gomez - Hands to 
+
+Myself
+</div>
+<div id="Ans">
+<input type="radio" name="ariana" value="Selena Gomez - Only You" >Selena Gomez - Only You
+</div>
+</div>
+<div id="content">
+<img class="dul" src="beyonce.gif" width=350px height=196px>
+<hr>
+<div id="Ans">
+<input type="radio" name="beyonce" value="Beyonce - Flawless" >Beyonce - Flawless
+</div>
+<div id="Ans">
+<input type="radio" name="beyonce" value="Beyonce - Love On Top" >Beyonce - Love On Top
+</div>
+<div id="Ans">
+<input type="radio" name="beyonce" value="Beyonce - Single Ladies" >Beyonce - Single Ladies
+</div>
+<div id="Ans">
+<input type="radio" name="beyonce" value="Beyonce - Hold Up" >Beyonce - Hold Up
+</div>
+</div>
+<div id="content">
+
+<img class="dul" src="paramore.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="paramore" value="Hey Monday - Homecoming" >Hey Monday - Homecoming
+</div>
+<div id="Ans">
+<input type="radio" name="paramore" value="Hey Monday - Candles" >Hey Monday - Candles
+</div>
+<div id="Ans">
+<input type="radio" name="paramore" value="Paramore - Ain't it Fun " >Paramore - Ain't it Fun
+</div>
+<div id="Ans">
+<input type="radio" name="paramore" value="Paramore - Still Into You" >Paramore - Still Into You
+</div>
+</div>
+<div id="content">
+<img class="dul" src="spice.gif" width=350px height=196px>
+<hr>
+<div id="Ans">
+<input type="radio" name="spice" value="Destiny's Child - Say My Name" >Destiny's Child - Say My Name
+</div>
+<div id="Ans">
+<input type="radio" name="spice" value="Spice Girls - Wannabe" >Spice Girls - Wannabe
+</div>
+<div id="Ans">
+<input type="radio" name="spice" value="Spice Girls - Stop" >Spice Girls - Stop
+</div>
+<div id="Ans">
+<input type="radio" name="spice" value="Destiny's Child - Cater To You" >Destiny's Child - Cater To You
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="backstreet.gif" width=350px height=196px>
+<hr>
+<div id="Ans">
+<input type="radio" name="backstreet" value="Backstreet Boys - Shape of My Heart" >Backstreet Boys - Shape of My Heart
+</div>
+<div id="Ans">
+<input type="radio" name="backstreet" value="Backstreet Boys - I Want It That Way" >Backstreet Boys - I Want It That Way
+</div>
+<div id="Ans">
+<input type="radio" name="backstreet" value="Westlife - Beautiful in White" >Westlife - Beautiful in White
+</div>
+<div id="Ans">
+<input type="radio" name="backstreet" value="Westlife - If I Let You Go" >Westlife - If I Let You Go
+</div>
+</div>
+
+
+<div id="content">
+<img class="dul" src="katy.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="katy" value="Katy Perry - Chained to the Music" >Katy Perry - Chained to the 
+
+Music
+</div>
+<div id="Ans">
+<input type="radio" name="katy" value="P!NK - Just Like Fire" >P!NK - Just Like Fire
+</div>
+<div id="Ans">
+<input type="radio" name="katy" value="Katy Perry - Roar" >Katy Perry - Roar
+</div>
+<div id="Ans">
+<input type="radio" name="katy" value="P!NK - Try" >P!NK - Try
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="5harmony.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="5harmony" value="Fifth Harmony - Work from Home" >Fifth Harmony - Work 
+
+from Home
+</div>
+<div id="Ans">
+<input type="radio" name="5harmony" value="Fifth Harmony - Worth It" >Fifth Harmony - Worth It
+</div>
+<div id="Ans">
+<input type="radio" name="5harmony" value="EXID - Lie" >EXID - Lie
+</div>
+<div id="Ans">
+<input type="radio" name="5harmony" value="EXID - Up and Down" >EXID - Up and Down
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="1d.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="1d" value="One Direction - History" >One Direction - History
+</div><div id="Ans">
+<input type="radio" name="1d" value="One Direction - Best Song Ever" >One Direction - Best Song Ever<br 
+
+/>
+</div>
+<div id="Ans">
+<input type="radio" name="1d" value="One Direction  Little Things" >One Direction  Little Things
+</div>
+<div id="Ans">
+<input type="radio" name="1d" value="One Direction - You and I" >One Direction - You and I
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="taylor.gif" width=350px height=196px>
+<hr>
+<div id="Ans">
+<input type="radio" name="taylor" value="Taylor Swift - 22" >Taylor Swift - 22
+</div>
+<div id="Ans">
+<input type="radio" name="taylor" value="Taylor Swift - Red" >Taylor Swift - Red
+</div>
+<div id="Ans">
+<input type="radio" name="taylor" value="Taylor Swift - We Are Never Ever Getting Back Together" >Taylor 
+
+Swift - We Are Never Ever Getting Back Together
+</div>
+<div id="Ans">
+<input type="radio" name="taylor" value="Taylor Swift - Style" >Taylor Swift - Style
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="avril.gif" width=350px height=196px>
+<hr>
+<div id="Ans">
+<input type="radio" name="avril" value="Avril Lavigne - Complicated" >Avril Lavigne - Complicated
+</div>
+<div id="Ans">
+<input type="radio" name="avril" value="Avril Lavigne - Sk8er Boi" >Avril Lavigne - Sk8er Boi
+</div>
+<div id="Ans">
+<input type="radio" name="avril" value="Avril Lavigne - Girlfriend" >Avril Lavigne - Girlfriend
+</div>
+<div id="Ans">
+<input type="radio" name="avril" value="Avril Lavigne - Rock N Roll" >Avril Lavigne - Rock N Roll
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="MCR.gif" width=350px height=196px>
+<hr>
+<div id="Ans">
+<input type="radio" name="MCR" value="P!ATD - Death of a Bachelor" >P!ATD - Death of a Bachelor
+</div>
+<div id="Ans">
+<input type="radio" name="MCR" value="P!ATD - I Write Sins Not Tragedies" >P!ATD - I Write Sins Not 
+
+Tragedies
+</div>
+<div id="Ans">
+<input type="radio" name="MCR" value="My Chemical Romance - Teenager" >My Chemical Romance - 
+
+Teenager
+</div>
+<div id="Ans">
+<input type="radio" name="MCR" value="My Chemical Romance - Death Parade" >My Chemical Romance - 
+
+Death Parade
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="troye.gif" width=350px height=196px>
+<hr>
+<div id="Ans">
+<input type="radio" name="troye" value="Troye Sivan - Youth" >Troye Sivan - Youth
+</div>
+<div id="Ans">
+<input type="radio" name="troye" value="Sam Smith - Like I Can" >Sam Smith - Like I Can
+</div>
+<div id="Ans">
+<input type="radio" name="troye" value="Sam Smith - Stay With Me" >Sam Smith - Stay With Me
+</div>
+<div id="Ans">
+<input type="radio" name="troye" value="Troye Sivan - Fools" >Troye Sivan - Fools
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="5sos.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="5sos" value="The 1975 - The Sound" >The 1975 - The Sound
+</div>
+<div id="Ans">
+<input type="radio" name="5sos" value="5SOS - She Looks So Perfect" >5SOS - She Looks So Perfect
+</div>
+<div id="Ans">
+<input type="radio" name="5sos" value="5SOS - Amnesia" >5SOS - Amnesia
+</div>
+<div id="Ans">
+<input type="radio" name="5sos" value="The 1975 - Chocolate" >The 1975 - Chocolate
+</div>
+</div>
+
+<div id="content">
+<img class="dul" src="littlemix.gif">
+<hr>
+<div id="Ans">
+<input type="radio" name="littlemix" value="4Minute - CRAZY" >4Minute - CRAZY
+</div>
+<div id="Ans">
+<input type="radio" name="littlemix" value="4Minute - Hate" >4Minute - Hate
+</div>
+<div id="Ans">
+<input type="radio" name="littlemix" value="Little Mix - Salute" >Little Mix - Salute
+</div>
+<div id="Ans">
+<input type="radio" name="littlemix" value="Little Mix - Hair" >Little Mix - Hair
+</div>
+</div>
+
+<br><br>
+<input type="button" value="Get score" onClick="getScore(this.form)">
+<input type="reset" value="Clear answers">
+<p> Score = <strong><input class="bgclr" type="text" size="5" name="percentage" 
+
+disabled></strong><br><br>
+Correct answers:<br>
+<textarea class="bgclr" name="solutions" wrap="virtual" rows="4" cols="30" disabled>
+</textarea>
+</form>
+
+
+</div>
+
+       <div class="footer">
+            Copyright ©  2017 by: Paulo, Renz, and Jhone - Case Study in COMP121
+       </div>
+       </div>
+</body>
+</html>
